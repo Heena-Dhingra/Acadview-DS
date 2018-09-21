@@ -10,7 +10,15 @@ class Demo
 				if(arr1[i] == arr2[j])
 				{
 					System.out.print(arr1[i]+" ");
+					arr2[j] = Integer.MAX_VALUE;
 					break;
+				}
+				else
+				{
+					if(i == arr1.length-1 && j==arr2.length-1)
+					{
+						System.out.println("There are no common elements.");
+					}
 				}
 			}
 		}
@@ -37,6 +45,7 @@ class Demo
 			arr2[i] = sc.nextInt();
 		}
 
+		System.out.println("Output: ");
 		intersection(arr1,arr2);
 	}
 }
